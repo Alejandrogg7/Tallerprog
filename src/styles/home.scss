@@ -1,0 +1,32 @@
+body {
+    margin-top: 80px;
+}
+
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    .card {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.navbar.top-navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    z-index: 10;
+}
+
+.my-card {
+    max-width: 400px;
+    margin: 20px;
+    .form-inline {
+        margin-bottom: 20px;
+        input {
+            margin-left: 20px;
+        }
+    }
+}
