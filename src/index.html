@@ -46,6 +46,30 @@
                         <h5 id="result2" class=""> ------- </h5>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ejercicio3">
+        <div class="my-card card">
+            <label for="">Ejercicio 3</label>
+            <div class="card-body">
+                <div class="form-inline">
+                    <label for=""> Numero</label>
+                    <input type="text" class="form-control" id="number">
+                    <div class="form-inline">
+                        <button class="btn btn-primary" onclick="main1()">Operacion</button>
+                    </div>
+                    <div>
+                        <span>Resultado : </span>
+                        <h5 id="result3" class=""> ------- </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script>
     const inputNumberOne = document.getElementById("numberOne");
@@ -124,6 +148,35 @@
     }
 
     /*Ejercicio 3*/
+    const par = document.getElementById("number");
+    const resultado = document.getElementById("result3");
+
+    function main1() {
+        const n = parseInt(par.value);
+        if (!n) {
+            result3.innerHTML = `ingrese un dato valido`;
+        } else {
+            operation(n);
+        }
+    }
+
+    function operation(n) {
+
+        if (n % 2) {
+            impar(n)
+        } else {
+            par1(n);
+        }
+    }
+
+    function par1(n) {
+        result3.innerHTML = `El numero ${n} es par`;
+    }
+
+    function impar(n) {
+        result3.innerHTML = `El numero ${n} es impar`;
+
+    }
 </script>
 
 </html>
