@@ -104,6 +104,55 @@
         </div>
     </div>
 
+    <div class="ejercicio5">
+        <div class="my-card card">
+            <label for="">Ejercicio 5</label>
+            <label for="">5. Sacar el factorial de un número</label>
+            <div class="card-body">
+                <div class="form-inline">
+                    <label for=""> Numero</label>
+                    <input type="text" class="form-control" id="numer">
+                    <div class="form-inline">
+                        <button class="btn btn-primary" onclick="Eje5()">Operacion</button>
+                    </div>
+                    <div>
+                        <span>Factorial : </span>
+                        <h5 id="resultad" class=""> ------- </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ejercicio6">
+        <div class="my-card card">
+            <label for="">Ejercicio 6</label>
+            <label for="">6. </label>
+            <div class="card-body">
+                <div class="form-inline">
+                    <div class="form-inline">
+                        <label for=""> Nota 1</label>
+                        <input type="text" class="form-control" id="not1">
+                    </div>
+                    <div class="form-inline">
+                        <label for="">Nota 2</label>
+                        <input type="text" class="form-control" id="not2">
+                    </div>
+                    <div class="form-inline">
+                        <label for="">Nota 3</label>
+                        <input type="text" class="form-control" id="not3">
+                    </div>
+                    <div class="form-inline">
+                        <button class="btn btn-primary" onclick="">Operacion</button>
+                    </div>
+                    <div>
+                        <span>Resultado : </span>
+                        <h5 id="" class=""> ------- </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     const inputNumberOne = document.getElementById("numberOne");
@@ -264,6 +313,20 @@
         result4.innerHTML = `Numero mayor es: ${mayor}`;
         result4.classList.add("text-success");
 
+    }
+
+    /*Ejercicio 5*/
+
+    const numer = document.getElementById("numer");
+    const resultad = document.getElementById("resultad");
+
+    function Eje5() {
+        let num = parseInt(numer.value)
+        let factorial = 1;
+        for (i = 1; i <= num; i++) {
+            factorial = factorial * i;
+        }
+        resultad.innerHTML = `El numero factorial es: ${factorial}`;
     }
 </script>
 

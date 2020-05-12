@@ -21,3 +21,9 @@ y
 n! = 1 (para n = 0)
 Por ejemplo 5! = 5 * 4 * 3 * 2 * 1
 Crear un programa que me imprima el resultado de x !
+
+
+
+6. Determinar si un alumno aprueba o reprueba un curso, sabiendo que
+aprobara si su promedio de tres calificaciones es mayor o igual a 70;
+reprueba en caso contrario.
