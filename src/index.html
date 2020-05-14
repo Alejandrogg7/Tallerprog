@@ -132,22 +132,22 @@
                 <div class="form-inline">
                     <div class="form-inline">
                         <label for=""> Nota 1</label>
-                        <input type="text" class="form-control" id="not1">
+                        <input type="text" class="form-control" id="nume1">
                     </div>
                     <div class="form-inline">
                         <label for="">Nota 2</label>
-                        <input type="text" class="form-control" id="not2">
+                        <input type="text" class="form-control" id="nume2">
                     </div>
                     <div class="form-inline">
                         <label for="">Nota 3</label>
-                        <input type="text" class="form-control" id="not3">
+                        <input type="text" class="form-control" id="nume3">
                     </div>
                     <div class="form-inline">
-                        <button class="btn btn-primary" onclick="">Operacion</button>
+                        <button class="btn btn-primary" onclick="calcula()">Operacion</button>
                     </div>
                     <div>
                         <span>Resultado : </span>
-                        <h5 id="" class=""> ------- </h5>
+                        <h5 id="resul6" class=""> ------- </h5>
                     </div>
                 </div>
             </div>
@@ -327,6 +327,63 @@
             factorial = factorial * i;
         }
         resultad.innerHTML = `El numero factorial es: ${factorial}`;
+    }
+
+
+    /*Ejercicio 6*/
+
+    const numer1 = document.getElementById("nume1");
+    const numer2 = document.getElementById("nume2");
+    const numer3 = document.getElementById("nume3");
+    const resultado6 = document.getElementById("resul6");
+
+    function calcula() {
+        const nu1 = parseInt(numer1.value);
+        const nu2 = parseInt(numer2.value);
+        const nu3 = parseInt(numer3.value);
+
+        if (!nu1 || !nu2 || !nu3) {
+            validation(nu1, nu2, nu3);
+        } else {
+            N(nu1, nu2, nu3);
+        }
+    }
+
+    function validation(n1, n2, n3) {
+
+        resul6.classList.add("text-danger");
+
+        if (!n1) {
+
+            resul6.innerHTML = "  "
+
+        } else if (!n2) {
+
+            resul6.innerHTML = "  "
+        } else if (!n3) {
+            resul6.innerHTML = " "
+        }
+    }
+
+    function N(nu1, nu2, nu3) {
+
+        resul6.classList.remove("text-danger");
+
+        let notas = 0;
+        let promedio = 0;
+
+        if (nu1, nu2, nu3) {
+            notas = (nu1 + nu2 + nu3) / 3
+        } else if (notas >= 70) {
+            promedio = notas
+            resul6.innerHTML = `Su nota final es: ${notas} APROBADO`;
+            resul6.classList.add("text-success");
+
+        } else(notas <= 70)
+        resul6.innerHTML = `Su nota final es: ${notas} REPROBADO`;
+        resul6.classList.add("text-success");
+
+
     }
 </script>
 
